@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  
+  <script>
+
+  document.write("Has Own Property");
+  document.write("<br/>")
+
+  var school_detail = {schoolName:"MIT"}
+
+  document.write(school_detail.hasOwnProperty("schoolName"));
+
+
+    document.write("<br/>")
+    var christmasList = {mike:"Book", jason:"sweater", chelsea:"iPad" }
+   // document.write(christmasList.mike);
+   /*Convert the object into string*/
+    document.write("Stringify the object");
+    document.write("<br/>")
+    var json_ele = JSON.stringify(christmasList);
+    document.write(json_ele);
+    document.write("<br/>")
+
+    document.write("parse the stringified object to json");
+    document.write("<br/>")
+    var parsed_data = JSON.parse(json_ele);
+    document.write(parsed_data.mike);
+
+
+
+
+
+  </script>
+</body>
+</html>

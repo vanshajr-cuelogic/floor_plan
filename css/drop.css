@@ -1,0 +1,338 @@
+			#viewport, #content{
+				width: 100%;
+				background-image:url('./image/floor_carpet.jpg');
+				background-size: 10%;
+			}
+			.zoomContainer div{
+				overflow: visible !important;
+				background-image:url('./image/floor_carpet.jpg');
+				background-size: 37%;
+				color: #000 !important;
+				margin: 0 !important;
+				padding: 0 !important;
+			}
+			.exit{ /*Gate*/
+				background: red !important;
+			    width: 163px !important;
+			    height: 10px !important;
+			    padding: 0 !important;
+			    margin: 20px 0 !important;
+			}
+			.node{ /*machine*/
+				width:44px;
+				height: 44px;
+				border:1px solid;
+				border-radius: 5px;
+				display: inline-block;
+			}
+			.node img{ /*machine*/
+				width: 44px !important;
+				height: 44px !important
+			}
+			.node1,.node2,.node3,.node4{
+				/*position: relative;
+				width: 40px !important;
+				height: 40px !important;
+				border:1px solid;
+				padding: 0 !important;
+				margin: 0 !important;
+				border-radius: 5px;
+				cursor: pointer;
+				background: #fff !important;
+				color:#000 !important;
+				border:1px solid #000 !important;
+				text-align: center;
+				z-index: 9999;*/
+			}
+			.node1{
+				position: relative;
+				left:0;
+				top: 0;
+			}
+			.node2{
+				position: relative;
+			/*	float: right !important;*/
+    			top: 0px;
+    			/*left:62%;*/
+    			float: right !important;
+			}
+			.node3{
+			    position: relative;
+			    left: -47%;
+			    top: 77%;
+			}
+			.node4{
+				left: 7%;
+				top: 77%;
+				position: relative;
+			}
+			.room{
+				margin:20px 0 !important;
+				font-size: 12px !important;
+				background: #555 !important;
+				color:#fff !important;
+				border:1px solid #000 !important;
+			}
+			.server-room{
+
+			}
+			.cabin{
+				width: 106px !important;
+			}
+			.cubic{
+    			margin: 0 !important;
+    			width: 180px !important;
+    			height: 180px;
+    			border:1px solid;
+    			position: relative;
+			}
+
+			.store_room{
+				height: 73px !important;
+				margin-bottom: 0!important;
+				width: 100px !important;
+			}
+			.bay_block{
+				margin: 0 !important;
+			    padding: 0 !important;
+			    width: 350px !important;
+			}
+			.clearer{
+				height: 0 !important;
+			}
+			.bay{
+				padding: 0 !important;
+				margin: 0 !important;
+				width: 360px !important;
+				margin-top:8% !important;
+			}
+			.bay_second{
+				margin-left:4% !important;
+				margin-top:8% !important;
+			}
+			.bay_third{
+				margin-left: 12% !important;
+    			width: 200px !important;
+    			font-size: 12px;
+    			text-align: center;
+    			margin-top:0 !important;
+			}
+			.cafeteria{
+				width: 100% !important;
+			    height: 350px !important;
+			    margin: 0 !important;
+			    padding: 0 !important;
+			    border:1px solid;
+			}
+			.server_room{
+				width: 100% !important;
+			    height: 200px !important;
+			    border: 1px solid;
+			    margin: 0 !important;
+			    padding: 0 !important;
+			}
+			.exit_tt{
+				border: none !important;
+			    width: 10px !important;
+			    height: 140px !important;
+			    margin: 0 !important;
+			    padding: 0 !important;
+			    background: #fff !important;
+			    float: right !important;
+			    background: red !important;
+			}
+			.open_room{
+				margin: 0 !important;
+				width: 100% !important;
+				height: 171px !important;
+				padding: 0 !important;
+			}
+			.account_room, .call_room{
+				width: 100% !important;
+			    height: 100px !important;
+			    padding: 0 !important;
+			    margin: 0 !important;
+			    background: #555 !important;
+			    color:#fff !important;
+				border:1px solid #000 !important;
+			}
+			 .call_room{
+			 	border-top: 1px solid !important;
+			 }
+			 .bunker{
+			 	margin: 0 !important;
+			    height: 500px;
+			    padding: 0 !important;
+			    width: 380px !important;
+			    background: #fff !important;
+			    border:none;
+			    background-image: url('image/floor_carpet.jpg') !important;
+				background-size: 37% !important;
+				border:none !important;
+			 }
+			 .cubic_bunker{
+			 	margin: 0 !important;
+			 	width: 100% !important;
+			    height: 50px;
+			    border: 1px solid;
+			    position: relative;
+			    padding: 0 !important
+			 }
+			 .node_b{
+			 	    width: 38px !important;
+				    height: 40px !important;
+				    padding: 0 !important;
+				    border-radius: 5px;
+				    border: 1px solid;
+				    margin: 4px 18px !important;
+				    background: #fff !important;
+			 }
+			 .bay_divider{
+			 	height: 50px !important;
+			 	margin: 0 !important;
+			 	padding: 0 !important;
+			 	width: 100% !important;
+			 	background-color: #fff !important;
+			 }
+			 .small_bunker_container{
+			 	width: 165px !important;
+			 	margin: 0 !important;
+			 	padding: 0 !important;
+			 	float: right !important;
+			 	margin-top: 51px !important;
+			 }
+			 .small_bunker{
+				width: 100% !important;
+			 }
+			 .conference{
+				height: 206px;
+				margin: 0 !important;
+				padding: 0 !important;
+				text-align: center;
+				width: 575px !important;
+			    background: #fff;
+			    border: 1px solid #000 !important;
+			    position: relative;
+			    z-index: 2;
+			 }
+			 .cabins{
+			 	width: 414px !important;
+			 	font-size: 12px !important;
+			 	text-align: center;
+			 }
+			 .restritced_area,.neel_cabin,.nikhil_cabin{
+			 	border: 1px solid !important;
+			    padding: 0 !important;
+			    margin: 0 !important;
+			    height: 205px !important;
+			    width: 136px !important;
+			    background: #555 !important;
+			    color:#fff !important;
+				border:1px solid #000 !important;
+			 }
+			 .hr_room{
+			 	padding: 0 !important;
+			    height: 115px !important;
+			    width: 350px !important;
+			    text-align: center;
+				background-image: url('image/floor_carpet.jpg') !important;
+				background-size: 37% !important;
+			}
+			 .hr_room .node_b{
+			 	margin: 4px 15px !important;
+			 }
+			 .right_hr{
+			 	float: right !important;
+			 	margin:11px 5px !important
+			 }
+
+			 .admin-section .node{
+			 /*	margin-top: 5px !important;*/
+			 }
+			 .this_block{
+			    border: 1px solid;
+			    padding: 0 !important;
+			    margin: 0 !important;
+			    z-index: 5;
+			    top: 0;
+			    left: 50%;
+			    background: #fff;
+			    border-radius: 5px;
+			    position: absolute;
+			    width: 50% !important;
+			    top: 0;
+			    left: 0;
+			    right: 0;
+			    bottom: 0;
+			    margin: auto !important;
+			    height: 50%;
+			}
+			.this_block img{
+			    width: 100% !important;
+			}
+			.profile-pic{
+		        width: 18% !important;
+			    padding: 0 !important;
+			    margin: 0 !important;
+			    color: transparent;
+			    float: left;
+			    margin: 16px 15px !important;
+			    border: 1px solid #000;
+			    border-radius: 10px;
+			}
+			.content-section{
+				width: 73% !important;
+			    border: 1px solid;
+			    padding: 0 !important;
+			    margin: 0 !important;
+			    min-height: 286px;
+			    margin: 16px 11px 0 0 !important;
+			    font-size: 18px;
+			    float: right;
+			    padding: 8px !important;
+			}
+			.zoomContainer .zoomTarget img{
+				width: 100%;
+				background-size: 100% 100%;
+			}
+
+			/*DROPPABLE*/
+
+			/*	#gallery { float: left; width:100%; }*/
+				.gallery.custom-state-active { background: #eee; }
+				/*.gallery li { float: left; width: 96px;padding: 0.4em; margin: 0 0.4em 0.4em 0; text-align: center; } */
+				.gallery li h5 { margin: 0 0 0.4em; cursor: move; }
+				.gallery li a { float: right; }
+				.gallery li a.ui-icon-zoomin { float: left; }
+				.gallery li img { width: 100%; cursor: move; }
+
+				#trash {     float: right;
+				    width: 32%;
+				    min-height:20em;
+				    padding: 1%; }
+				#trash h4 { line-height: 16px; margin: 0 0 0.4em; }
+				#trash h4 .ui-icon { float: left; }
+				#trash .gallery h5 { display: none; }
+
+				.zoomContainer div{
+					width: auto !important;
+				}
+				.zoomContainer .admin-section{
+				height: 47px;
+			    padding: 0 !important;
+			    position: relative;
+			    margin: 0 !important;
+			    font-size: 12px;
+			    width: 173px !important;
+			    border: 1px solid;
+			    width: 250px !important;
+			 }
+			 
+			 .admin-section li:first-child{
+
+			 }
+			 .admin-section li:last-child{
+			 	
+			 }
+
+			/* DROPPABLE*/

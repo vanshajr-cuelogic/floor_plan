@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  
+  <script>
+  var mango= {
+    color:"yellow",
+    taste:"sweet"
+    }
+   // document.write(mango.taste);
+    
+	document.write("Constructor Pattern for Creating Objects");
+    
+
+	/*Creating object 
+	1. Constructor Pattern for Creating Objects
+	*/
+
+    function Fruit(color_fruit,qty,cost){
+    	
+    	document.write("<br/>");
+    	this.color_fruit_item = color_fruit;
+    	this.qty = qty;
+    	this.cost_item = cost;
+
+
+    	this.showcolor=function(){
+    		document.write("<br/>")
+    		document.write(this.color_fruit_item);
+    	}
+
+
+    	this.item_cost = function(){
+    		document.write("<br/>")
+    		document.write(this.cost_item);
+    	}
+
+    	this.qtyshow = function(){
+    		document.write("<br/>")
+    		document.write(this.qty);
+    	}
+    	this.total_cost = function(){
+    		document.write("<br/>")
+    		document.write(this.qty * this.cost_item);
+    	}
+    }
+
+    var mangoFruit = new Fruit("Yellow",8,12);
+    mangoFruit.showcolor();
+    mangoFruit.qtyshow();
+    mangoFruit.item_cost();
+    mangoFruit.total_cost();
+
+    var pineappleFruit = new Fruit("orange",12,15);
+	pineappleFruit.showcolor();
+    pineappleFruit.qtyshow();
+    pineappleFruit.item_cost();
+    pineappleFruit.total_cost();
+
+
+
+	/*Creating object 
+	2. Prototype Pattern for Creating Objects
+	*/
+
+	function fruit(){
+		document.write("<br/>");
+		document.write("<br/>");
+		document.write("Prototype Pattern for Creating Objects");
+		document.write("<br/>")
+	}
+
+	fruit.prototype.color = "Green";
+	fruit.prototype.cost_ele = 20;
+
+	fruit.prototype.showcolor_second=function(){
+		document.write(this.color);
+	}
+	fruit.prototype.costbatao= function(){
+		document.write(this.cost_ele);
+	}
+
+	//Calling
+	var dusramangofunction = new fruit();
+	dusramangofunction.showcolor_second();
+	dusramangofunction.costbatao();
+
+
+
+  </script>
+</body>
+</html>

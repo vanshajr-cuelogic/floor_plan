@@ -1,0 +1,257 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Simple test</title>
+		<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+		<link href='http://fonts.googleapis.com/css?family=Fjord+One' rel='stylesheet' type='text/css'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="src/js/jquery.zoomooz-helpers.js"></script>
+		<script type="text/javascript" src="src/js/jquery.zoomooz-anim.js"></script>
+		<script type="text/javascript" src="src/js/jquery.zoomooz-core.js"></script>
+		<script type="text/javascript" src="src/js/purecssmatrix.js"></script>
+		<script type="text/javascript" src="src/js/sylvester.src.stripped.js"></script>
+		<script type="text/javascript" src="src/js/jquery.zoomooz-zoomTarget.js"></script>
+		<script type="text/javascript" src="src/js/jquery.zoomooz-zoomContainer.js"></script>
+
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+		  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+		  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+		  <link rel="stylesheet" href="/resources/demos/style.css">
+		
+		<style>
+		/*.zoomTarget{
+			position: relative;
+		}*/
+		.zoomContainer .zoomTarget{
+			width: 6% !important;
+		}
+		.zoomContainer .zoomTarget img{
+			width: 100%;
+			background-size: 100% 100%;
+		}
+		.node1,.node2,.node3,.node4{
+			/*position: absolute;*/
+			width: 20px !important;
+			height: 20px !important;
+			border:1px solid;
+			padding: 0 !important;
+			margin: 0 !important;
+			border-radius: 5px;
+		}
+		.node1{
+			left:0;
+			top: 0;
+		}
+		.node2{
+			right:0;
+			top: 0;
+		}
+		.node3{
+			left:0;
+			bottom: 0;
+		}
+		.node4{
+			right:0;
+			bottom: 0;
+		}
+		#viewport, #content{
+			width: 100% !important;
+		}
+		#target_node div{
+			position: absolute !important;
+    		z-index: 9999;
+		}
+		.this_block{
+		    border: 1px solid;
+		    padding: 0 !important;
+		    margin: 0 !important;
+		    z-index: 5;
+		    top: 0;
+		    left: 50%;
+		    background: #fff;
+		    border-radius: 5px;
+		    position: absolute;
+		    width: 50% !important;
+		    top: 0;
+		    left: 0;
+		    right: 0;
+		    bottom: 0;
+		    margin: auto !important;
+		    height: 50%;
+		}
+		.this_block img{
+		    width: 100% !important;
+		}
+		.profile-pic{
+	        width: 21% !important;
+		    padding: 0 !important;
+		    margin: 0 !important;
+		    color: transparent;
+		    float: left;
+		}
+		.content-section{
+			width: 73% !important;
+		    border: 1px solid;
+		    padding: 0 !important;
+		    margin: 0 !important;
+		    min-height: 286px;
+		    margin: 16px 7px !important;
+		    font-size: 18px;
+		    float: left;
+		    padding: 8px !important;
+		}
+		.zoomContainer div{
+			position: relative !important;
+			overflow: visible !important;
+		}
+		@keyframes blinker {  
+		  100% { opacity: 0.0; }
+		}
+		.empty-place{
+			background: green !important;
+			 animation: blinker 0.2s linear infinite;
+		}
+		.occupied-machines{
+			background: red !important;
+			 animation: blinker 1s linear infinite;
+		}
+		.user-view{
+			font-size: 16px;
+		}
+		.empty-green-block{
+			background: green;height: 20px; width: 20px;display: inline-block;
+		}
+		.red-block{
+			background: red;
+			height: 20px;
+			width: 20px;
+			display: inline-block;
+		}
+		</style>
+
+		<script>
+		$(document).ready(function(){
+
+			$(".zoomContainer > .zoomTarget > div").click(function(){
+				$('.this_block').remove();
+				$('body').append($("<div class='this_block'><div class='profile-pic'>"+$(this).html()+"</div><div class='content-section'><p><label>Name : "+$(this).text()+"</label></p><p><label>Project : </label></p><p><label>Seat No. : </label></p></div></div>"));
+			});
+
+			$(".zoomContainer, #viewport").click(function(){
+				$('.this_block').remove();
+			});
+
+			$( "#target_node > div" ).draggable({ containment: "#content", scroll: false });
+		});
+		</script>
+	</head>
+	<body>
+		<div id="viewport" class="zoomViewport">
+
+			<div id="content" class="zoomContainer">
+			    <div class="zoomTarget" id="target_node">
+			    	<div class="node1"><img src="website-assets/images/chrome.png"></div>
+			    	<div class="node2"><img src="website-assets/images/ff.png"></div>
+			    	<div class="node3"><img src="website-assets/images/ie.png"></div>
+			    	<div class="node4"><img src="website-assets/images/opera.png"></div>
+			    </div>
+
+			    <div class="zoomTarget" id="target_node">
+			    	<div class="node1"><img src="website-assets/images/ff.png"></div>
+			    	<div class="node2"><img src="website-assets/images/chrome.png"></div>
+			    	<div class="node3"><img src="website-assets/images/opera.png"></div>
+			    	<div class="node4"><img src="website-assets/images/ie.png"></div>
+			    </div>
+
+			    <div class="zoomTarget" id="target_node">
+			    	<div class="node1"></div>
+			    	<div class="node2 empty-place"></div>
+			    	<div class="node3"></div>
+			    	<div class="node4"></div>
+			    </div>
+			     <div class="zoomTarget" id="target_node">
+			    	<div class="node1"></div>
+			    	<div class="node2 empty-place"></div>
+			    	<div class="node3"></div>
+			    	<div class="node4"></div>
+			    </div>
+			  
+			     <div class="zoomTarget" id="target_node">
+			    	<div class="node1"></div>
+			    	<div class="node2 empty-place"></div>
+			    	<div class="node3 empty-place"></div>
+			    	<div class="node4"></div>
+			    </div>
+			     <div class="zoomTarget" id="target_node">
+			    	<div class="node1 occupied-machines"></div>
+			    	<div class="node2 empty-place"></div>
+			    	<div class="node3 empty-place"></div>
+			    	<div class="node4 empty-place"></div>
+			    </div>
+			     <div class="zoomTarget" id="target_node">
+			    	<div class="node1"></div>
+			    	<div class="node2 occupied-machines"></div>
+			    	<div class="node3"></div>
+			    	<div class="node4"></div>
+			    </div>
+			     <div class="zoomTarget" id="target_node">
+			    	<div class="node1"></div>
+			    	<div class="node2 empty-place"></div>
+			    	<div class="node3 empty-place"></div>
+			    	<div class="node4"></div>
+			    </div>
+			     <span class="clearer"></span>
+			     <div class="zoomTarget" id="target_node">
+			    	<div class="node1"></div>
+			    	<div class="node2 empty-place"></div>
+			    	<div class="node3 empty-place"></div>
+			    	<div class="node4"></div>
+			    </div>
+			     <div class="zoomTarget" id="target_node">
+			    	<div class="node1 occupied-machines"></div>
+			    	<div class="node2"></div>
+			    	<div class="node3"></div>
+			    	<div class="node4"></div>
+			    </div>
+			     <div class="zoomTarget" id="target_node">
+			    	<div class="node1"></div>
+			    	<div class="node2"></div>
+			    	<div class="node3 occupied-machines"></div>
+			    	<div class="node4"></div>
+			    </div>
+			     <div class="zoomTarget" id="target_node">
+			    	<div class="node1"></div>
+			    	<div class="node2"></div>
+			    	<div class="node3 occupied-machines"></div>
+			    	<div class="node4"></div>
+			    </div>
+			     <span class="clearer"></span>
+			</div>
+
+			<div class="user-view">
+			<div class="empty-green-block"></div> Empty Location
+			<div class="red-block"></div> Restricted Location
+			</div>
+
+		</div>
+	</body>
+	
+	
+
+		<!--************************
+		**  GOOGLE ANALYTICS      **
+		*************************-->
+			
+			<script type="text/javascript">
+			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+			</script>
+			<script type="text/javascript">
+			try {
+			var pageTracker = _gat._getTracker("UA-16288001-1");
+			pageTracker._trackPageview();
+			} catch(err) {}
+			</script>
+
+</html>
+	
